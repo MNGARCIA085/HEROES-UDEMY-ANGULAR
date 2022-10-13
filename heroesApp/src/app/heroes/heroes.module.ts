@@ -8,6 +8,7 @@ import { ListadosComponent } from './pages/listados/listados.component';
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { CommonModule } from '@angular/common';
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 
 
 
@@ -19,6 +20,7 @@ import { CommonModule } from '@angular/common';
     HomeComponent,
     HeroeComponent,
     ListadosComponent,
+    HeroeTarjetaComponent,
   ],
   imports: [
     CommonModule,
