@@ -7,7 +7,18 @@ import { Hero } from '../interfaces/heroes.interface';
 export class ImagenPipe implements PipeTransform {
 
   transform(heroe:Hero): string {
-    return `assets/heroes/${heroe.id}.jpg`
+
+    // considero todos los casos, pues puedo no tener una imagen
+    if (!heroe.id && heroe.alt_img){
+        return 'assets/no-image.jpg'
+    } else if (heroe.alt_img) {
+        return heroe.alt_img
+    } else {
+        return `assets/heroes/${heroe.id}.jpg`
+    }
+
+
+    
   }
 
 }
