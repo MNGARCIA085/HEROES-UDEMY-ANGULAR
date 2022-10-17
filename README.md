@@ -19,7 +19,7 @@ CRUD app. The theme is heroes.
 
 - Server
 
--- Install dependencies.
+Install dependencies.
 
 npm install -g json-server
 
