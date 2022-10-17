@@ -17,7 +17,7 @@ CRUD app. The theme is heroes.
 
 - Clone the repo.
 
-- Server
+- <span style="color:orange">Backend</span> 
 
 Install dependencies.
 
@@ -32,7 +32,7 @@ Start the server
 ... heroesServer$ json-server --watch db.json
 
 
-- Frontend
+- <span style="color:orange">Frontend</span> 
  
  ...$ cd heroesApp
  
