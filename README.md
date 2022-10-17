@@ -19,7 +19,7 @@ CRUD app. The theme is heroes.
 
 - Server
 
-Install dependencies.
+-- Install dependencies.
 
 npm install -g json-server
 
@@ -32,7 +32,7 @@ Start the server
 ... heroesServer$ json-server --watch db.json
 
 
- Frontend
+- Frontend
  
  ...$ cd heroesApp
  
