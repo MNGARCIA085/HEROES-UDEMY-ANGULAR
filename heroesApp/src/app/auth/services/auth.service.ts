@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Auth } from '../interfaces/auth.interface';
-import { tap } from 'rxjs';
+import { Observable, of, tap , map} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -31,5 +31,25 @@ export class AuthService {
   logout(){
     this._auth = undefined;
   }
+
+  verificarAutenticacion(): Observable<boolean> {
+
+    // si no hay id en el local storage es porque no está logueado
+    if (!localStorage.getItem('id')){
+      return of(false); // uso of porque debo devolver un observable
+    }
+
+    return this.http.get<Auth>(`${this.baseUrl}/usuarios/1`)
+      .pipe(
+        map( auth => {
+          this._auth = auth;
+          return true; // acá no hace falta el of porque ya es un observable
+        })
+      )
+
+
+
+  }
+
 
 }
